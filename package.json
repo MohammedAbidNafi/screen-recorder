@@ -1,0 +1,77 @@
+{
+  "name": "screen-recorder",
+  "productName": "screen-recorder",
+  "version": "1.0.0",
+  "description": "Screen Recorder for Windows",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+
+  "build":{
+    "appId": "screen-recorder",
+    "win":{
+      "target": ["nsis"],
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis":{
+      "uninstallDisplayName": "Uninstall",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Mohammed Abid Nafi",
+    "email": "abid.nafi04@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "screen_recorder"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-open-link-in-browser": "^1.0.2",
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "electron": "12.0.7",
+    "electron-builder": "^22.10.5",
+    "electron-winstaller": "^5.0.0",
+    "electron-wix-msi": "^3.2.0"
+  }
+}

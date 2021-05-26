@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Screen Recorder for Windows</title>
+    <script type="text/javascript">
+      window.shell = require('electron').shell;
+    </script>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="render.js"></script>
+    <script defer src="openlink.js"></script>
+  </head>
+  <body>
+  
+    <div style="position: relative; align-items: center; text-align: center;">
+      <h1 class="title">Screen Recorder for Windows</h1>
+      <h3 class="title">An Open Source Project by MargsApp and MargsWeb <br> Licensed under Apache 2.0</h3>
+    </div>
+    
+
+    <div style="position: relative; align-content: center;">
+
+      <video width="896" height="504" style="position: relative; margin-top: -2px;"></video>
+    
+    </div>
+    
+
+    <div style="position: relative; margin-top: 15px;">
+      <button id="startBtn" class="buttonStart">Start Recording</button>
+      <button id="stopBtn" class="buttonStop">Stop Recording</button>
+
+      <hr />
+    </div>
+
+   
+    <h5 id="recordtext">Now Previewing => Entire Screen</h5>
+    <hr />
+    
+
+    <button id="videoSelectBtn" class="buttonChoose">
+      Choose what to record
+    </button>
+
+    <div id="button-container" style="position: relative; top: 25px; bottom: 25px;">
+      <b1>Audio</b1>
+      <label class="switch" style="position: relative; left: 15px;">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+
+      <b1 style="position: relative; left: 25px;">Currently wont work....</b1>
+    </div>
+
+
+    <p class="about">This project is also available in MacOS and Linux. Check the source code in <a id="open-external" href="https://github.com/MohammedAbidNafi/Windows-Screen-Recorder" onclick="electronOpenLinkInBrowser();">Github</a>.</p>
+   
+    <script type="text/javascript">
+
+     document.getElementById("open-external").addEventListener("click", function (e){
+       e.preventDefault();
+
+        var remoteLink = this.getAttribute('href');
+        shell.openExternal (remoteLink);
+      });
+
+    </script>
+
+  </body>
+</html>
