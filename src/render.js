@@ -196,5 +196,5 @@ async function openLink(){
   const win = new BrowserWindow()
   // Instead bare webContents:
   win.webContents.on('will-navigate', handleRedirect)
-  win.loadURL('https://github.com/MohammedAbidNafi/Windows-Screen-Recorder')
+  win.loadURL('https://github.com/MohammedAbidNafi/screen-recorder')
 }
