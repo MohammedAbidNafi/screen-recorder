@@ -10,6 +10,7 @@ Screen Recorder is an Electron app which records the screen or a particular appl
 4. Ability to record user Mic.
 5. Ability to Customise resolution and FPS.
 6. Feature to record entire screen by default instead of selecting what to record.
+7. Ability to playback recorded video.
 
 ## Ways to Contribute 
 1. Create an issue to discuss about your idea.(https://github.com/MohammedAbidNafi/Windows-Screen-Recorder/issues)
